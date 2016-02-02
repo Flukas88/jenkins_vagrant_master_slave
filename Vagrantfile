@@ -11,7 +11,7 @@ Vagrant.require_version ">= 1.8.0"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  # Don't attempt to update Virtualbox Guest Additions
+  # To update Virtualbox Guest Additions to the one on the host
   if Vagrant.has_plugin?("vagrant-vbguest") then
     config.vbguest.auto_update = true
   end
