@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     slave.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
       v.memory = 512
-      v.cpus = 1
+      v.cpus = 2
       v.gui = false
       v.name = "jenkinslave"
     end
@@ -43,7 +43,7 @@ end
     master.vm.provision :shell, :path => "bootstrap_master.sh"
     master.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--cpuexecutioncap", "70"]
-      v.memory = 1024
+      v.memory = 512
       v.cpus = 2
       v.gui = false
       v.name = "jenkinsmaster"
