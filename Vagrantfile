@@ -38,7 +38,7 @@ end
   config.vm.define "master" do |master|
     master.vm.box = "ubuntu/trusty64"
     master.vm.hostname = "jenkins.local"
-    master.vm.network "private_network", ip: "192.168.100.10"
+    master.vm.network "private_network", ip: "192.168.100.21"
     master.vm.network "forwarded_port", guest: 8080, host: 8090
     master.vm.provision :shell, :path => "bootstrap_master.sh"
     master.vm.provider "virtualbox" do |v|
