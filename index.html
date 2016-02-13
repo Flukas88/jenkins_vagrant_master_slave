@@ -37,7 +37,15 @@
 
 <div class="highlight highlight-source-shell"><pre>vagrant up</pre></div>
 
-<p>After that you can just set up the slave (jenkinslave.local) on the master with /var/lib/jenkins/ as directory and with master jenkins user for credentials.</p>
+<p>And enter into the master with</p>
+
+<div class="highlight highlight-source-shell"><pre>vagrant ssh master</pre></div>
+
+<p>or slave with</p>
+
+<div class="highlight highlight-source-shell"><pre>vagrant ssh slave</pre></div>
+
+<p>After that you can just set up the slave (<em>jenkinslave.local</em>) on the master with <em>/var/lib/jenkins/</em> as directory and with master jenkins user for credentials.</p>
 
 <p>Where to find it after <em>up</em> is finished : <a href="http://192.168.100.21:8080/">http://192.168.100.21:8080/</a></p>
       </section>
