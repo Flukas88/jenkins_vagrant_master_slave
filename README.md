@@ -13,7 +13,7 @@ vagrant ssh master
 ```
 or slave with
 ```bash
-vagrant ssh master
+vagrant ssh minion
 ```
 After that you can just set up the slave (jenkinslave.local) on the master with /var/lib/jenkins/ as directory and with master jenkins user for credentials.
 
