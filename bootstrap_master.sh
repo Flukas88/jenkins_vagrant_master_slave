@@ -7,3 +7,4 @@ sudo apt-get autoremove -y
 sudo -u jenkins sh -c "echo -e  'y\n'| ssh-keygen -q -t rsa -N '' -f /var/lib/jenkins/.ssh/id_rsa"
 sshpass -p 'jenkins' scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /var/lib/jenkins/.ssh/id_rsa.pub "jenkins@jenkinslave.local:/var/lib/jenkins/.ssh/authorized_keys"
 sudo service jenkins start
+sudo locale-gen en_US.UTF-8
